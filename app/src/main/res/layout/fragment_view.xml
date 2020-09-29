@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewFragment">
+
+
+
+    <RelativeLayout
+        android:id="@+id/h2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/progress_theme"
+            android:layout_width="match_parent"
+            android:layout_alignBottom="@+id/eff"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/eff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        android:layout_below="@+id/h2">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:background="#6AD14A"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="TARGET QTY"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/targetQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                
+                android:textColor="#fff"
+                android:textSize="64sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/targetHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_actual"
+            android:layout_weight="1"
+            android:background="#00C6BB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="ACTUAL QTY"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/actualQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                
+                android:textSize="64sp"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/actualHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_defec"
+            android:layout_weight="1"
+            android:background="#D81624"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="DEFECTIVE"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/defeQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                
+                android:textColor="#fff"
+                android:textSize="64sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/defHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
