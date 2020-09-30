@@ -21,10 +21,10 @@
             android:src="@drawable/smarttv" />
 
         <RelativeLayout
-            android:layout_below="@+id/e1"
             android:id="@+id/h2"
             android:layout_width="400dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/e1">
 
             <ProgressBar
                 android:id="@+id/progressBar"
@@ -43,5 +43,15 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
         </RelativeLayout>
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000" />
 
 </RelativeLayout>

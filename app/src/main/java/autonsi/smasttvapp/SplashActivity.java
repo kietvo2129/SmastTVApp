@@ -27,6 +27,7 @@ public class SplashActivity extends AppCompatActivity {
     String versionName = BuildConfig.VERSION_NAME;
     String latestVersion = "", latestVersionCode = "", url = "", releaseNotes = "";
     ProgressBar progressBar;
+    TextView version;
     Handler mHandler = new Handler();
     int intprogress = -1;
     TextView eff;
@@ -37,10 +38,12 @@ public class SplashActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
         eff = findViewById(R.id.eff);
+        version = findViewById(R.id.version);
         startService(new Intent(this, MainActivity.class));
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
+        version.setText(versionName);
         new read_infor_app().execute(webUrl + "APIProduct/GetApp_info");
         mHandler.post(runnable);
     }
