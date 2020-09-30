@@ -98,11 +98,13 @@ public class NoticeFragment extends Fragment {
         thread.start();
 
         noticeMasterArrayList = MainActivity.noticeMasterArrayList;
-        ArrayList<String> arrayList = noticeMasterArrayList.get(0).image;
+        if (noticeMasterArrayList.size()!=0) {
+            ArrayList<String> arrayList = noticeMasterArrayList.get(0).image;
 
-        for (int i = 0;i<arrayList.size();i++){
+            for (int i = 0; i < arrayList.size(); i++) {
 
-            flipperImage(arrayList.get(i));
+                flipperImage(arrayList.get(i));
+            }
         }
 
 //        if (arrayList.size()==0){
@@ -176,7 +178,9 @@ public class NoticeFragment extends Fragment {
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            setData();
+                            if (noticeMasterArrayList.size()!=0) {
+                                setData();
+                            }
                         }
                     });
                 }

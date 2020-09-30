@@ -11,9 +11,12 @@
         android:roundIcon="@drawable/smarttv"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".USBCameraActivity" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".USBCameraActivity" />
+        <activity
+            android:name=".SplashActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
