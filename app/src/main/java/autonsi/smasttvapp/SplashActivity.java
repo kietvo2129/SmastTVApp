@@ -43,7 +43,7 @@ public class SplashActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-        version.setText(versionName);
+        version.setText("Version: "+ versionName);
         new read_infor_app().execute(webUrl + "APIProduct/GetApp_info");
         mHandler.post(runnable);
     }
